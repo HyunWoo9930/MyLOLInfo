@@ -55,7 +55,7 @@ public class riotAPITest {
     @Test
     void getChampionId() throws FileNotFoundException {
         JsonObject jsonObject = new JsonObject();
-        JsonObject jsonObject1 = new JsonParser().parse(new FileReader("championData.json")).getAsJsonObject().get("data").getAsJsonObject();
+        JsonObject jsonObject1 = new JsonParser().parse(new FileReader("jsonCfg/championData.json")).getAsJsonObject().get("data").getAsJsonObject();
         for(String key : jsonObject1.keySet()) {
             jsonObject.addProperty(jsonObject1.get(key).getAsJsonObject().get("key").getAsString(), key);
         }

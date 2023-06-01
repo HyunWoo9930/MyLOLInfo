@@ -18,8 +18,8 @@ public class myChampionMastery {
 
     static {
         try {
-            info = new JsonParser().parse(new FileReader("info.json")).getAsJsonObject();
-            championId = new JsonParser().parse(new FileReader("championId.json")).getAsJsonObject();
+            info = new JsonParser().parse(new FileReader("jsonCfg/info.json")).getAsJsonObject();
+            championId = new JsonParser().parse(new FileReader("jsonCfg/championId.json")).getAsJsonObject();
         } catch (FileNotFoundException e) {
             throw new RuntimeException("파일을 찾지 못하였습니다.");
         }
